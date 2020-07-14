@@ -1,6 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Home</title>
@@ -10,25 +8,25 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!-- Bootstrap Core CSS -->
-<link href="./css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 <!-- Custom CSS -->
-<link href="./css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
 <!-- Graph CSS -->
-<link href="./css/lines.css" rel='stylesheet' type='text/css' />
-<link href="./css/font-awesome.css" rel="stylesheet">
+<link href="css/lines.css" rel='stylesheet' type='text/css' />
+<link href="css/font-awesome.css" rel="stylesheet">
 <!-- jQuery -->
-<script src="./js/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <!----webfonts--->
 <link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 <!---//webfonts--->
 <!-- Nav CSS -->
 <link href="css/custom.css" rel="stylesheet">
 <!-- Metis Menu Plugin JavaScript -->
-<script src="./js/metisMenu.min.js"></script>
-<script src="./js/custom.js"></script>
+<script src="js/metisMenu.min.js"></script>
+<script src="js/custom.js"></script>
 <!-- Graph JavaScript -->
-<script src="./js/d3.v3.js"></script>
-<script src="./js/rickshaw.js"></script>
+<script src="js/d3.v3.js"></script>
+<script src="js/rickshaw.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -106,24 +104,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	        		</ul>
 	      		</li>
 			    <li class="dropdown">
-	        		<a href="#" class="dropdown-toggle avatar" data-toggle="dropdown"><img src="images/1.png"><span class="badge">9</span></a>
+	        		<a href="#" class="dropdown-toggle avatar" data-toggle="dropdown"><img src="images/1.png"></a>
 	        		<ul class="dropdown-menu">
 						<li class="dropdown-menu-header text-center">
 							<strong>Account</strong>
 						</li>
-						<li class="m_2"><a href="#"><i class="fa fa-bell-o"></i> Updates <span class="label label-info">42</span></a></li>
-						<li class="m_2"><a href="#"><i class="fa fa-envelope-o"></i> Messages <span class="label label-success">42</span></a></li>
-						<li class="m_2"><a href="#"><i class="fa fa-tasks"></i> Tasks <span class="label label-danger">42</span></a></li>
-						<li><a href="#"><i class="fa fa-comments"></i> Comments <span class="label label-warning">42</span></a></li>
-						<li class="dropdown-menu-header text-center">
-							<strong>Settings</strong>
-						</li>
-						<li class="m_2"><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-						<li class="m_2"><a href="#"><i class="fa fa-wrench"></i> Settings</a></li>
-						<li class="m_2"><a href="#"><i class="fa fa-usd"></i> Payments <span class="label label-default">42</span></a></li>
-						<li class="m_2"><a href="#"><i class="fa fa-file"></i> Projects <span class="label label-primary">42</span></a></li>
-						<li class="divider"></li>
-						<li class="m_2"><a href="#"><i class="fa fa-shield"></i> Lock Profile</a></li>
 						<li class="m_2"><a href="#"><i class="fa fa-lock"></i> Logout</a></li>
 	        		</ul>
 	      		</li>
@@ -325,164 +310,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  <div class="span_11">
 		<div class="col-md-6 col_4">
 		  <div class="map_container"><div id="vmap" style="width: 100%; height: 400px;"></div></div>
-		  <!----Calender -------->
-			<link rel="stylesheet" href="css/clndr.css" type="text/css" />
-			<script src="js/underscore-min.js" type="text/javascript"></script>
-			<script src= "js/moment-2.2.1.js" type="text/javascript"></script>
-			<script src="js/clndr.js" type="text/javascript"></script>
-			<script src="js/site.js" type="text/javascript"></script>
-			<!----End Calender -------->
 		</div>
 		<div class="col-md-6 col_5">
 		  <div id="chart_container">
 		   <div id="chart"></div>
 	       <div id="slider"></div>
-<script>
 
-var seriesData = [ [], [], [], [], [] ];
-var random = new Rickshaw.Fixtures.RandomData(50);
-
-for (var i = 0; i < 75; i++) {
-	random.addData(seriesData);
-}
-
-var graph = new Rickshaw.Graph( {
-	element: document.getElementById("chart"),
-	renderer: 'multi',
-
-	dotSize: 5,
-	series: [
-		{
-			name: 'temperature',
-			data: seriesData.shift(),
-			color: '#AFE9FF',
-			renderer: 'stack'
-		}, {
-			name: 'heat index',
-			data: seriesData.shift(),
-			color: '#FFCAC0',
-			renderer: 'stack'
-		}, {
-			name: 'dewpoint',
-			data: seriesData.shift(),
-			color: '#555',
-			renderer: 'scatterplot'
-		}, {
-			name: 'pop',
-			data: seriesData.shift().map(function(d) { return { x: d.x, y: d.y / 4 } }),
-			color: '#555',
-			renderer: 'bar'
-		}, {
-			name: 'humidity',
-			data: seriesData.shift().map(function(d) { return { x: d.x, y: d.y * 1.5 } }),
-			renderer: 'line',
-			color: '#ef553a'
-		}
-	]
-} );
-
-
-graph.render();
-
-var detail = new Rickshaw.Graph.HoverDetail({
-	graph: graph
-});
-</script>
 </div>
-	      <!-- map -->
-<link href="css/jqvmap.css" rel='stylesheet' type='text/css' />
-<script src="js/jquery.vmap.js"></script>
-<script src="js/jquery.vmap.sampledata.js" type="text/javascript"></script>
-<script src="js/jquery.vmap.world.js" type="text/javascript"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function() {
-		jQuery('#vmap').vectorMap({
-		    map: 'world_en',
-		    backgroundColor: '#333333',
-		    color: '#ffffff',
-		    hoverOpacity: 0.7,
-		    selectedColor: '#666666',
-		    enableZoom: true,
-		    showTooltip: true,
-		    values: sample_data,
-		    scaleColors: ['#C8EEFF', '#006491'],
-		    normalizeFunction: 'polynomial'
-		});
-	});
-</script>
-<!-- //map -->
        </div>
        <div class="clearfix"> </div>
     </div>
     <div class="content_bottom">
      <div class="col-md-8 span_3">
 		  <div class="bs-example1" data-example-id="contextual-table">
-		    <table class="table">
-		      <thead>
-		        <tr>
-		          <th>#</th>
-		          <th>Column heading</th>
-		          <th>Column heading</th>
-		          <th>Column heading</th>
-		        </tr>
-		      </thead>
-		      <tbody>
-		        <tr class="active">
-		          <th scope="row">1</th>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		        </tr>
-		        <tr>
-		          <th scope="row">2</th>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		        </tr>
-		        <tr class="success">
-		          <th scope="row">3</th>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		        </tr>
-		        <tr>
-		          <th scope="row">4</th>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		        </tr>
-		        <tr class="info">
-		          <th scope="row">5</th>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		        </tr>
-		        <tr>
-		          <th scope="row">6</th>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		        </tr>
-		        <tr class="warning">
-		          <th scope="row">7</th>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		        </tr>
-		        <tr>
-		          <th scope="row">8</th>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		        </tr>
-		        <tr class="danger">
-		          <th scope="row">9</th>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		          <td>Column content</td>
-		        </tr>
-		      </tbody>
-		    </table>
+
 		   </div>
 	   </div>
 	   <div class="col-md-4 span_4">
@@ -540,15 +381,12 @@ var detail = new Rickshaw.Graph.HoverDetail({
 		</div>
 		<div class="clearfix"> </div>
 	    </div>
-		<div class="copy">
-            <p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
-	    </div>
 		</div>
        </div>
       <!-- /#page-wrapper -->
    </div>
     <!-- /#wrapper -->
     <!-- Bootstrap Core JavaScript -->
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
