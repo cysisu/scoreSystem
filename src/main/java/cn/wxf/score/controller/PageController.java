@@ -18,6 +18,11 @@ public class PageController {
 
     @RequestMapping("/index")
     public String getIndex(){
+        return "teacherIndex";
+    }
+
+    @RequestMapping("/studentIndex")
+    public String getStudentIndex(){
         return "studentIndex";
     }
 }

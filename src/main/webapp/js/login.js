@@ -25,6 +25,9 @@ $(function() {
                    if(data.status==1){
                         parent.location.href = '/index';
                    }
+                   else if(data.status==2){
+                        parent.location.href = '/studentIndex';
+                   }
                    else{
                         alert("用户名或者密码错误!");
                    }

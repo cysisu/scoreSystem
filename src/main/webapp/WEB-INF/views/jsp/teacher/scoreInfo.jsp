@@ -61,6 +61,7 @@ layui.use(['jquery', 'table', 'layer', 'form'], function(){
       {field:'subject', title:'subject', width:350, fixed: 'center', align:'center',sort: true}
       ,{field:'studentId', title:'学生学号', width:300, align:'center',sort: true}
       ,{field:'score', title:'分数', width:300, align:'center'}
+      ,{fixed: 'right', title:'备注', toolbar: '#barDemo', align:'center',width:120}
     ]]
     ,page: true
      // 表格容器id，用于表格重载
