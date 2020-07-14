@@ -113,83 +113,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	        		</ul>
 	      		</li>
 			</ul>
-			<form class="navbar-form navbar-right">
-              <input type="text" class="form-control" value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
-            </form>
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
                             <a href="index.html"><i class="fa fa-dashboard fa-fw nav_icon"></i>Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Layouts<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="grids.html">Grid System</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-indent nav_icon"></i>Menu Levels<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="graphs.html">Graphs</a>
-                                </li>
-                                <li>
-                                    <a href="typography.html">Typography</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-envelope nav_icon"></i>Mailbox<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="inbox.html">Inbox</a>
-                                </li>
-                                <li>
-                                    <a href="compose.html">Compose email</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="widgets.html"><i class="fa fa-flask nav_icon"></i>Widgets</a>
-                        </li>
-                         <li>
-                            <a href="#"><i class="fa fa-check-square-o nav_icon"></i>Forms<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="forms.html">Basic Forms</a>
-                                </li>
-                                <li>
-                                    <a href="validation.html">Validation</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-table nav_icon"></i>Tables<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="basic_tables.html">Basic Tables</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw nav_icon"></i>Css<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="media.html">Media</a>
-                                </li>
-                                <li>
-                                    <a href="login.html">Login</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
                         </li>
                     </ul>
                 </div>
@@ -289,23 +217,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  		        </div>
 		          </div>
 		    </div>
-			<div class="col-md-4 stats-info">
-                <div class="panel-heading">
-                    <h4 class="panel-title">Browser Stats</h4>
-                </div>
-                <div class="panel-body">
-                    <ul class="list-unstyled">
-                        <li>Google Chrome<div class="text-success pull-right">12%<i class="fa fa-level-up"></i></div></li>
-                        <li>Firefox<div class="text-success pull-right">15%<i class="fa fa-level-up"></i></div></li>
-                        <li>Internet Explorer<div class="text-success pull-right">18%<i class="fa fa-level-up"></i></div></li>
-                        <li>Safari<div class="text-danger pull-right">17%<i class="fa fa-level-down"></i></div></li>
-                        <li>Opera<div class="text-danger pull-right">10%<i class="fa fa-level-down"></i></div></li>
-                        <li>Mobile &amp; tablet<div class="text-success pull-right">14%<i class="fa fa-level-up"></i></div></li>
-                        <li class="last">Others<div class="text-success pull-right">5%<i class="fa fa-level-up"></i></div></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="clearfix"> </div>
+
+
 	  </div>
 	  <div class="span_11">
 		<div class="col-md-6 col_4">
