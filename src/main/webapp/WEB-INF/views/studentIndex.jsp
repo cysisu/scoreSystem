@@ -1,109 +1,78 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
 <html>
 <head>
-<title>Home</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Modern Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
- <!-- Bootstrap Core CSS -->
-<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
-<!-- Custom CSS -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<!-- Graph CSS -->
-<link href="css/lines.css" rel='stylesheet' type='text/css' />
-<link href="css/font-awesome.css" rel="stylesheet">
-<!-- jQuery -->
-<script src="js/jquery.min.js"></script>
-<!----webfonts--->
-<link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
-<!---//webfonts--->
-<!-- Nav CSS -->
-<link href="css/custom.css" rel="stylesheet">
-<!-- Metis Menu Plugin JavaScript -->
-<script src="js/metisMenu.min.js"></script>
-<script src="js/custom.js"></script>
-<!-- Graph JavaScript -->
-<script src="js/d3.v3.js"></script>
-<script src="js/rickshaw.js"></script>
-<link rel="stylesheet" href="../css/myStyle.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="layui/css/layui.css">
+<link rel="stylesheet"
+	href="//at.alicdn.com/t/font_tnyc012u2rlwstt9.css" media="all" />
+<link rel="stylesheet" href="css/main.css" media="all" />
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 </head>
-<body>
-<div id="wrapper">
-     <!-- Navigation -->
-        <nav class="top1 navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Modern</a>
-            </div>
-            <!-- /.navbar-header -->
-            <ul class="nav navbar-nav navbar-right">
-
-			    <li class="dropdown">
-	        		<a href="#" class="dropdown-toggle avatar" data-toggle="dropdown"><img src="images/1.png"></a>
-	        		<ul class="dropdown-menu">
-						<li class="dropdown-menu-header text-center">
-							<strong>Account</strong>
-						</li>
-						<li class="m_2"><a href="#"><i class="fa fa-lock"></i> Logout</a></li>
-	        		</ul>
-	      		</li>
-			</ul>
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw nav_icon"></i>Dashboard</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
-            </div>
-            <!-- /.navbar-static-side -->
-        </nav>
-
-
-		<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
-        <div id="page-wrapper">
-        <div class="graphs">
-
-
-
-
-      <div class="col_1">
-
-	  </div>
-	  <div class="span_11">
-
-
-    </div>
-    <div class="content_bottom">
-     <div class="col-md-8 span_3">
-
-	   </div>
-	   <div class="col-md-4 span_4">
-
-		  <div class="cloud">
-
-
-		  </div>
+<body class="main_body">
+	<div class="layui-layout layui-layout-admin">
+		<!-- 顶部 -->
+		<div class="layui-header header">
+			<div class="layui-main">
+				<a href="#" class="logo">成绩管理系统</a>
+				<!-- 显示/隐藏菜单 -->
+				<a href="javascript:;" class="iconfont hideMenu icon-menu1"></a>
+				<!-- 顶部右侧菜单 -->
+				<ul class="layui-nav top_menu">
+					<li id="loginOut_btn" class="layui-nav-item"><a href="javascript:;"
+						class="signOut"><i class="iconfont icon-loginout"></i><cite>退出</cite></a>
+					</li>
+				</ul>
+			</div>
 		</div>
-	    </div>
+		<!-- 左侧导航 -->
+		<div class="layui-side layui-bg-black">
+			<div class="navBar"></div>
 		</div>
-       </div>
-      <!-- /#page-wrapper -->
-   </div>
-    <!-- /#wrapper -->
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+		<!-- 右侧内容 -->
+		<div class="layui-body layui-form">
+			<div class="layui-tab marg0" lay-filter="bodyTab" id="top_tabs_box">
+				<ul class="layui-tab-title top_tab" id="top_tabs">
+					<li class="layui-this" lay-id=""><i class="iconfont icon-computer"></i><cite>后台首页</cite></li>
+				</ul>
+				<!-- 当前页面操作 -->
+				<ul class="layui-nav closeBox">
+					<li class="layui-nav-item">
+						<a href="javascript:;"><i class="iconfont icon-caozuo"></i> 页面操作</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="javascript:;" class="refresh refreshThis"><i class="layui-icon">&#x1002;</i> 刷新当前</a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="closePageOther"><i class="iconfont icon-prohibit"></i> 关闭其他</a>
+							</dd>
+							<dd>
+								<a href="javascript:;" class="closePageAll"><i class="iconfont icon-guanbi"></i> 关闭全部</a>
+							</dd>
+						</dl>
+					 </li>
+				</ul>
+				<!-- 中间内容区域 -->
+				<div class="layui-tab-content clildFrame">
+					<div class="layui-tab-item layui-show">
+						<iframe src="/admin/main"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="layui/layui.js"></script>
+	<script type="text/javascript" src="js/leftNav.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script>
+        $(function() {
+            $("#loginOut_btn").click(function() {
+                 alert("退出登录");
+                 console.log("退出登录");
+                 parent.location.href = '/';
+            });
+        });
+	</script>
 </body>
 </html>

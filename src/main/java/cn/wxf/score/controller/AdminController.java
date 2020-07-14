@@ -1,7 +1,9 @@
 package cn.wxf.score.controller;
 
+import cn.wxf.score.entity.Menu;
 import cn.wxf.score.entity.Student;
 import cn.wxf.score.entity.Teacher;
+import cn.wxf.score.service.AdminService;
 import cn.wxf.score.service.StudentService;
 import cn.wxf.score.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,9 @@ public class AdminController {
 
     @Autowired
     private TeacherService teacherService;
+
+    @Autowired
+    private AdminService adminService;
 
     @RequestMapping("/login")
     @ResponseBody
@@ -63,7 +68,19 @@ public class AdminController {
                 map.put("status", 0);
             }
         }
-
         return map;
+    }
+
+    @RequestMapping("/getMenus")
+    @ResponseBody
+    public List<Menu> getMenus(HttpSession session){
+        List<Menu> menus = adminService.getMenus();
+        System.out.println("大小："+menus.size());
+        return menus;
+    }
+
+    @RequestMapping("/main")
+    public String getMain() {
+        return "/jsp/main";
     }
 }
