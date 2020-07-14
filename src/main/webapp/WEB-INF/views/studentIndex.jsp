@@ -82,38 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <div class="col_1">
 
 		    <div class="col-md-4 span_8">
-		       <div class="activity_box">
-		        <div class="scrollbar" id="style-2">
-                   <div class="activity-row">
 
-
-
-                    </div>
-	  			    <div class="activity-row">
-	                 <div class="col-xs-1"><i class="fa fa-comment text-info"></i> </div>
-	                 <div class="col-xs-3 activity-img"><img src='images/3.png' class="img-responsive" alt=""/></div>
-	                 <div class="col-xs-8 activity-desc">
-
-	                 </div>
-
-                    </div>
-                    <div class="activity-row">
-	                 <div class="col-xs-1"><i class="fa fa-check text-info icon_11"></i></div>
-	                 <div class="col-xs-3 activity-img"><img src='images/1.png' class="img-responsive" alt=""/></div>
-
-
-                    </div>
-                    <div class="activity-row1">
-	                 <div class="col-xs-1"><i class="fa fa-user text-info icon_12"></i></div>
-	                 <div class="col-xs-3 activity-img"><img src='images/4.png' class="img-responsive" alt=""/></div>
-	                 <div class="col-xs-8 activity-desc">
-
-
-	                 </div>
-
-                     </div>
-	  		        </div>
-		          </div>
 		    </div>
 
 
@@ -132,56 +101,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 <div class="col_2">
 		  <div class="box_1">
 		   <div class="col-md-6 col_1_of_2 span_1_of_2">
-             <a class="tiles_info">
-			    <div class="tiles-head red1">
-			        <div class="text-center">Orders</div>
-			    </div>
-			    <div class="tiles-body red">10</div>
-			 </a>
+
 		   </div>
 		   <div class="col-md-6 col_1_of_2 span_1_of_2">
-              <a class="tiles_info tiles_blue">
-			    <div class="tiles-head tiles_blue1">
-			        <div class="text-center">Sales</div>
-			    </div>
-			    <div class="tiles-body blue1">30</div>
-			  </a>
+
 		   </div>
 		   <div class="clearfix"> </div>
 		 </div>
 		 <div class="box_1">
-		   <div class="col-md-6 col_1_of_2 span_1_of_2">
-             <a class="tiles_info">
-			    <div class="tiles-head fb1">
-			        <div class="text-center">Facebook</div>
-			    </div>
-			    <div class="tiles-body fb2">10</div>
-			 </a>
-		   </div>
-		   <div class="col-md-6 col_1_of_2 span_1_of_2">
-              <a class="tiles_info tiles_blue">
-			    <div class="tiles-head tw1">
-			        <div class="text-center">Twitter</div>
-			    </div>
-			    <div class="tiles-body tw2">30</div>
-			  </a>
-		   </div>
-		   <div class="clearfix"> </div>
+
+
 		   </div>
 		  </div>
 		  <div class="cloud">
-			<div class="grid-date">
-				<div class="date">
-					<p class="date-in">New York</p>
-					<span class="date-on">°F °C </span>
-					<div class="clearfix"> </div>
-				</div>
-				<h4>30°<i class="fa fa-cloud-upload"> </i></h4>
-			</div>
-			<p class="monday">Monday 10 July</p>
+
+
 		  </div>
 		</div>
-		<div class="clearfix"> </div>
 	    </div>
 		</div>
        </div>
