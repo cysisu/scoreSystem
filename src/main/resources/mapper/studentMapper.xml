@@ -13,7 +13,7 @@
     </select>
 
     <select id="getStudent" resultMap="Student">
-        select * from student where teacherId=#{teacherId} and password=#{password}
+        select * from student where studentId=#{studentId} and password=#{password}
     </select>
 
 

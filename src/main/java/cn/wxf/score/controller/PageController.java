@@ -14,7 +14,7 @@ public class PageController {
 
     @RequestMapping("/index")
     public String getIndex(){
-        return "index";
+        return "studentIndex";
     }
 }
 
