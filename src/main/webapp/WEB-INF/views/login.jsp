@@ -49,7 +49,7 @@
 					</div>
 					<div class="form-group">
 							<i class="fa fa-lock fa-lg"></i>
-							<input class="form-control required" type="password" placeholder="Password" id="login_password" name="password" maxlength="8"/>
+							<input class="form-control required" type="password" placeholder="Password" id="login_password" name="password" maxlength="20"/>
 					</div>
 					<div class="form-group">
                     		<i class="fa fa-adjust fa-lg"></i>

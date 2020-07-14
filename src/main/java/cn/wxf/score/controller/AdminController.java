@@ -25,6 +25,7 @@ import java.util.logging.LogManager;
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
+    //登录日志，输出到D:\\logs目录下
     private static Logger logger= LoggerFactory.getLogger(AdminController.class);
 
     @Autowired
@@ -46,6 +47,7 @@ public class AdminController {
         session.setAttribute("character",character);
         Map<String, Object> map = new HashMap<String, Object>();
         if(character.equals("student")){
+            System.out.println("登陆进入student");
             List<Student> studentList=studentService.getStudent(id,password);
             int size=studentList.size();
             if(size>0){
@@ -84,7 +86,15 @@ public class AdminController {
     @RequestMapping("/getMenus")
     @ResponseBody
     public List<Menu> getMenus(HttpSession session){
-        List<Menu> menus = adminService.getMenus();
+        String character=session.getAttribute("character").toString();
+        //如何是老师，进入首页和学生的左边导航栏是不同的
+        List<Menu> menus;
+        if(character.equals("student")){
+            menus = adminService.getStudentMenus();
+        }
+        else{
+            menus = adminService.getMenus();
+        }
         System.out.println("大小："+menus.size());
         return menus;
     }
