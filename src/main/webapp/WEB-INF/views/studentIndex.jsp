@@ -81,11 +81,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
       <div class="col_1">
 
-		    <div class="col-md-4 span_8">
-
-		    </div>
-
-
 	  </div>
 	  <div class="span_11">
 
@@ -93,26 +88,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
     <div class="content_bottom">
      <div class="col-md-8 span_3">
-		  <div class="bs-example1" data-example-id="contextual-table">
 
-		   </div>
 	   </div>
 	   <div class="col-md-4 span_4">
-		 <div class="col_2">
-		  <div class="box_1">
-		   <div class="col-md-6 col_1_of_2 span_1_of_2">
 
-		   </div>
-		   <div class="col-md-6 col_1_of_2 span_1_of_2">
-
-		   </div>
-		   <div class="clearfix"> </div>
-		 </div>
-		 <div class="box_1">
-
-
-		   </div>
-		  </div>
 		  <div class="cloud">
 
 
