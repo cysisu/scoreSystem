@@ -7,7 +7,7 @@ CREATE TABLE score(
     subject char(10),
     score float
 );
-insert into student (studentId,subject,score) values ('171006101','10001','高数',75);
+insert into score (studentId,teacherId,subject,score) values ('171006101','10001','高数',75);
 
 CREATE TABLE student(
 	studentId char(10),
