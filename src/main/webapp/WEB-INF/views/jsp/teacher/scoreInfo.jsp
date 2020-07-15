@@ -12,7 +12,12 @@
 </head>
 <body>
 
-<button id="find-score-btn" class="layui-btn" style="margin-left:25px;margin-top:20px;width:100px">搜索</button>
+<div class="layui-form-item" >
+     <div class="layui-inline" style="margin-top:10px">
+        <button id="find-score-btn" class="layui-btn" style="margin-left:25px;margin-top:20px;width:100px">搜索</button>
+        <button id="add-score-btn" class="layui-btn" style="margin-left:25px;margin-top:20px;width:100px">添加</button>
+    </div>
+</div>
 
 <div id="add-order-layer" style="padding: 20px">
   <form id="find-score-form" class="layui-form layui-form-pane" >
@@ -29,9 +34,53 @@
             <input type="text" id="subject"  name="subject"  autocomplete="off" class="layui-input" style="width:140px">
           </div>
     </div>
+
+    <div class="layui-inline" style="margin-top:10px">
+              <label class="layui-form-label">分数</label>
+              <div class="layui-input-inline">
+                <input type="text" id="score"  name="subject"  autocomplete="off" class="layui-input" style="width:140px">
+              </div>
+    </div>
+
   </div>
 </form>
 </div>
+
+
+
+<!-- 更新成绩弹出层 -->
+  <div id="update-score-layer" style="display: none; padding: 20px">
+    <form id="update-score-form" class="layui-form layui-form-pane" lay-filter="update-user-form">
+
+     <div class="layui-form-item" >
+        <label class="layui-form-label">科目</label>
+        <div class="layui-input-block">
+          <input type="text" name="subject" readonly=＂true＂ class="layui-input" readonly>
+        </div>
+     </div>
+
+     <div class="layui-form-item" >
+             <label class="layui-form-label">学号</label>
+             <div class="layui-input-block">
+               <input type="text" name="studentId" readonly=＂true＂ class="layui-input" readonly>
+             </div>
+     </div>
+
+     <div class="layui-form-item" >
+             <label class="layui-form-label">分数</label>
+             <div class="layui-input-block">
+               <input type="text" name="score" class="layui-input" >
+             </div>
+     </div>
+
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="update-score-form-submit">提交</button>
+          <button type="reset" class="layui-btn layui-btn-primary" style="margin-left:70px">重置</button>
+        </div>
+      </div>
+    </form>
+  </div>
 
 
 
@@ -40,6 +89,7 @@
 
 
 <script type="text/html" id="barDemo">
+  <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 
@@ -83,6 +133,62 @@ layui.use(['jquery', 'table', 'layer', 'form'], function(){
       });
   });
 
+     $('#add-score-btn').click(function() {
+         var studentId=$('#studentId').val();
+         var subject=$('#subject').val();
+         var score=$('#score').val();
+         console.log("studentId:"+studentId);
+         $.ajax({
+                url: "/teacher/setScore",
+                type: "POST",
+                data: JSON.stringify({studentId:studentId,subject:subject,score:score}),
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function(data) {
+                if (data.status == 1) {
+                     layer.close(layer.index);
+                     layer.msg('添加成功');
+                     table.reload('user-tbl');
+                } else {
+                     layer.msg('添加失败');
+                }
+                },
+                error: function() {
+                     console.log("ajax error");
+                }
+         });
+                // 阻止表单跳转
+    });
+
+
+   // 添加用户表单提交
+      form.on('submit(add-score-form-submit)', function(data) {
+               // ajax方式添加用户
+               console.log(data);
+               $.ajax({
+               url: "/teacher/setScore",
+               type: "POST",
+               data: JSON.stringify(data.field),
+               contentType: 'application/json',
+               dataType: 'json',
+               success: function(data) {
+               if (data.status == 1) {
+                    layer.close(layer.index);
+                    layer.msg('添加成功');
+                    table.reload('user-tbl');
+               } else {
+                    layer.msg('添加失败');
+               }
+               },
+               error: function() {
+                    console.log("ajax error");
+               }
+               });
+               // 阻止表单跳转
+               return false;
+        });
+
+
 
       //监听行工具事件
       table.on('tool(test)', function(obj){
@@ -113,33 +219,32 @@ layui.use(['jquery', 'table', 'layer', 'form'], function(){
         } else if(obj.event === 'edit'){
           console.log(data)
           form.val('update-user-form', {
-                 "orderIdUpdate": data.orderId,
-                 "roomNumberUpdate": data.roomNumber,
-                 "statusUpdate": data.status,
-                 "labelUpdate": data.label,
+                 "subject": data.subject,
+                 "studentId": data.studentId,
+                 "score": data.score
           });
           layer.open({
                  type: 1,
                  title: '更新订单',
                  skin: 'layui-layer-molv',
                  area: ['600px'],
-                 content: $('#update-user-layer')
+                 content: $('#update-score-layer')
           });
-           form.on('submit(update-user-form-submit)', function(data) {
+           form.on('submit(update-score-form-submit)', function(data) {
                console.log(data);
                       // ajax方式更新用户
                $.ajax({
-               url: "/order/updateOrder",
+               url: "/teacher/updateScore",
                type: "POST",
                data: data.field,
                dataType: 'json',
                success: function(data) {
                     if (data.status == 1) {
                         layer.close(layer.index);
-                        layer.msg('更新成功');
+                        layer.msg('修改成功');
                         table.reload('user-tbl');
                     } else {
-                        layer.msg('更新失败');
+                        layer.msg('修改失败');
                     }
                },
                error: function() {
@@ -151,7 +256,6 @@ layui.use(['jquery', 'table', 'layer', 'form'], function(){
             });
         }
       });
-
 
 });
 </script>

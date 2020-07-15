@@ -38,4 +38,13 @@ public class TeacherServiceImpl implements TeacherService {
     public int updateTeacherInfo(Teacher teacher){
         return teacherDao.updateTeacherInfo(teacher);
     }
+    public int updateScore(Score score){
+        return teacherDao.updateScore(score);
+    }
+    public List<Teacher> getTeacher(String teacherId){
+        return teacherDao.getTeacherById(teacherId);
+    }
+    public int insertTeacher(String teacherId, String password){
+        return teacherDao.insertTeacher(teacherId,password);
+    }
 }

@@ -16,6 +16,13 @@ public class Score {
         this.subject=subject;
     }
 
+    public Score(String studentId,String teacherId,String subject,float score){
+        this.studentId=studentId;
+        this.teacherId=teacherId;
+        this.subject=subject;
+        this.score=score;
+    }
+
     public String getTeacherName() {
         return teacherName;
     }

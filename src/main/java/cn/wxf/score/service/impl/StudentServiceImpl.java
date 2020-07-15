@@ -31,4 +31,12 @@ public class StudentServiceImpl implements StudentService {
         return studentDao.updateStudentInfo(student);
     }
 
+    public List<Student> getStudent(String studentId){
+        return studentDao.getStudentById(studentId);
+    }
+
+    public int insertStudent(String studentId, String password){
+        return studentDao.insertStudent(studentId,password);
+    }
+
 }

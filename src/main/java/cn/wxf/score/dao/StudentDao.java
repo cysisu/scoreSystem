@@ -13,4 +13,6 @@ public interface StudentDao {
     List<Score> getScores(@Param("studentId")String studentId);
     List<Score> findScores(Score score);
     int updateStudentInfo(Student student);
+    List<Student> getStudentById(@Param("studentId")String studentId);
+    int insertStudent(@Param("studentId")String studentId, @Param("password")String password);
 }

@@ -14,4 +14,7 @@ public interface TeacherDao {
     List<Score> findScores(Score score);
     int deleteScore(Score score);
     int updateTeacherInfo(Teacher teacher);
+    int updateScore(Score score);
+    List<Teacher> getTeacherById(@Param("teacherId")String teacherId);
+    int insertTeacher(@Param("teacherId")String teacherId, @Param("password")String password);
 }

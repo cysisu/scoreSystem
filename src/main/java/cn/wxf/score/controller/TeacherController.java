@@ -120,4 +120,20 @@ public class TeacherController {
         }
         return map;
     }
+
+    @RequestMapping(value = "/updateScore" )
+    @ResponseBody
+    public Map<String, Object> updateScore( String subject, String studentId, float score, HttpSession session) {
+        String teacherId=session.getAttribute("id").toString();
+        Score score1=new Score(studentId,teacherId,subject,score);
+
+        int result = teacherService.updateScore(score1);
+        Map<String, Object> map = new HashMap<String, Object>();
+        if (result > 0) {
+            map.put("status", 1);
+        } else {
+            map.put("status", 0);
+        }
+        return map;
+    }
 }

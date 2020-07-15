@@ -83,6 +83,44 @@ public class AdminController {
         return map;
     }
 
+    @RequestMapping("/register")
+    @ResponseBody
+    public Map<String, Object> register(String id, String password, String character, HttpServletRequest request, HttpSession session)
+            throws ParseException {
+        System.out.println("请求注册");
+        logger.info("id为："+id+" 请求注册");
+        Map<String, Object> map = new HashMap<String, Object>();
+        if(character.equals("student")){
+            logger.debug("学生编号是："+id+" 请求注册");
+            List<Student> studentList=studentService.getStudent(id);
+            int size=studentList.size();
+            if(size>0){
+                //用户已经存在
+                map.put("status", 0);
+            }
+            else{
+                studentService.insertStudent(id,password);
+                map.put("status", 1);
+            }
+
+        }
+        else if(character.equals("teacher")){
+            logger.debug("教师编号是："+id+" 请求注册");
+            List<Teacher> teacherList=teacherService.getTeacher(id);
+            int size=teacherList.size();
+            if(size>0){
+                //用户已经存在
+                map.put("status", 0);
+            }
+            else{
+                teacherService.insertTeacher(id,password);
+                map.put("status", 1);
+            }
+        }
+        return map;
+    }
+
+
     @RequestMapping("/getMenus")
     @ResponseBody
     public List<Menu> getMenus(HttpSession session){

@@ -75,22 +75,22 @@
 				<div class="col-sm-9 col-md-9">
 					<div class="form-group">
 						<i class="fa fa-user fa-lg"></i>
-						<input class="form-control required" type="text" placeholder="studentId or teacherId" name="username" id="register_username" autofocus="autofocus"/>
+						<input class="form-control required" type="text" id="sign_username" placeholder="studentId or teacherId" name="username" id="register_username" autofocus="autofocus"/>
 					</div>
 					<div class="form-group">
 							<i class="fa fa-lock fa-lg"></i>
-							<input class="form-control required" type="password" placeholder="Password" id="register_password" name="password"/>
+							<input class="form-control required" id="password1" type="password" placeholder="Password" id="register_password" name="password"/>
 					</div>
 					<div class="form-group">
 							<i class="fa fa-user fa-lg"></i>
-							<input class="form-control required" type="password" placeholder="Re-type Your Password" id="register_rpassword" name="rpassword"/>
+							<input class="form-control required" id="password2" type="password" placeholder="Re-type Your Password" id="register_rpassword" name="rpassword"/>
 					</div>
 					<div class="form-group">
                             <i class="fa fa-adjust fa-lg"></i>
-                            <input class="form-control required" type="text" placeholder="teacher or student" id="register_character" name="character" maxlength="8"/>
+                            <input class="form-control required" type="text" id="sign_character" placeholder="teacher or student" id="register_character" name="character" maxlength="8"/>
                     </div>
 					<div class="form-group">
-						<input type="submit" class="btn btn-success pull-right" value="Sign Up "/>
+						<input type="submit" id="sign_up" class="btn btn-success pull-right" value="Sign Up "/>
 						<input type="submit" class="btn btn-info pull-left" id="back_btn" value="Back"/>
 					</div>
 				</div>

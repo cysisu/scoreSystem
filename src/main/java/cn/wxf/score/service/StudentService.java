@@ -11,4 +11,6 @@ public interface StudentService {
     List<Score> getScores(@Param("studentId")String studentId);
     List<Score> findScores(Score score);
     int updateStudentInfo(Student student);
+    List<Student> getStudent(String studentId);
+    int insertStudent(String studentId, String password);
 }

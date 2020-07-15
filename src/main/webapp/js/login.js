@@ -35,5 +35,37 @@ $(function() {
         });
 
     });
+
+    $("#sign_up").click(function() {
+           console.log("sign_up");
+    	    var username = $('#sign_username').val();
+            var password= $("#password1").val();
+            var password1=$("#password2").val();
+            var character=$("#sign_character").val();
+            if(password!=password1){
+                 alert("两次输入密码不相同!");
+                 return;
+            }
+    	    $.ajax({
+                 url : '/admin/register',
+                 type : 'post',
+                 data :{
+                        id:username,
+                        password :password,
+                        character:character
+                 },
+                 success : function(data) {
+                       console.log(data);
+                       if(data.status==1){
+                            alert("注册成功！");
+                            parent.location.href = '/';
+                       }
+                       else{
+                            alert("用户名已经存在!");
+                       }
+                 }
+            });
+
+    });
 });
 

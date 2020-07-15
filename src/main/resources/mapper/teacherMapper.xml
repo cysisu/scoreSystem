@@ -24,9 +24,9 @@
         insert into score(studentId,teacherId,subject,score) values (#{studentId},  #{teacherId}, #{subject}, #{score})
     </insert>
 
-    <insert id="deleteScore">
+    <delete id="deleteScore">
         delete from score  where studentId=#{studentId} and teacherId=#{teacherId} and subject=#{subject}
-    </insert>
+    </delete>
     <select id="getScores" resultMap="Score">
         select * from score where teacherId=#{teacherId}
     </select>
@@ -36,4 +36,15 @@
     <update id="updateTeacherInfo">
         update teacher set name = #{name}, phone = #{phone},email=#{email} where teacherId = #{teacherId}
     </update>
+    <update id="updateScore">
+        update score set score=#{score} where teacherId = #{teacherId} and studentId=#{studentId} and subject=#{subject}
+    </update>
+
+    <select id="getTeacherById" resultMap="Teacher">
+        select * from teacher where teacherId=#{teacherId}
+    </select>
+
+    <insert id="insertTeacher">
+        insert into teacher(teacherId,password) values (#{teacherId}, #{password})
+    </insert>
 </mapper>
