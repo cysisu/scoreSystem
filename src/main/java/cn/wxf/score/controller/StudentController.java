@@ -67,10 +67,10 @@ public class StudentController {
     }
 
     //更新老师的个人信息
-    @RequestMapping(value = "/updateTeacherInfo" )
+    @RequestMapping(value = "/updateStudentInfo" )
     @ResponseBody
     public Map<String, Object> updateStudentInfo( String studentId, String name, String phone, String email,HttpSession session) {
-        System.out.println("phone:"+phone);
+        System.out.println("studentId:"+studentId);
         Student student=new Student(studentId,name,phone,email);
         System.out.println(student);
         int result = studentService.updateStudentInfo(student);

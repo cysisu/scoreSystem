@@ -33,7 +33,7 @@
     </select>
 
     <update id="updateStudentInfo">
-        update teacher set name = #{name}, phone = #{phone},email=#{email} where studentId = #{studentId}
+        update student set name = #{name}, phone = #{phone},email=#{email} where studentId = #{studentId}
     </update>
 
     <select id="getStudentById" resultMap="Student">

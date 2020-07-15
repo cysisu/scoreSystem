@@ -23,7 +23,7 @@
             <div class="layui-inline">
               <label class="layui-form-label">姓名</label>
               <div class="layui-input-inline">
-                <input type="text" id="name" value=""  readonly=＂true＂ lay-verify="" autocomplete="off" class="layui-input">
+                <input type="text" id="name" value=""   lay-verify="" autocomplete="off" class="layui-input">
               </div>
             </div>
           </div>
