@@ -56,7 +56,7 @@
 				<!-- 中间内容区域 -->
 				<div class="layui-tab-content clildFrame">
 					<div class="layui-tab-item layui-show">
-						<iframe src="/admin/main"></iframe>
+						<iframe src="/admin/studentMain"></iframe>
 					</div>
 				</div>
 			</div>

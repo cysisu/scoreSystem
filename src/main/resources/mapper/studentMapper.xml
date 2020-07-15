@@ -8,6 +8,14 @@
         <result column="phone" property="phone" />
         <result column="email" property="email" />
     </resultMap>
+    <resultMap type="cn.wxf.score.entity.Score" id="Score">
+        <result column="teacherId" property="teacherId" />
+        <result column="studentId" property="studentId" />
+        <result column="subject" property="subject" />
+        <result column="score" property="score" />
+        <result column="studentName" property="studentName" />
+        <result column="teacherName" property="teacherName" />
+    </resultMap>
     <select id="getStudents" resultMap="Student">
         select * from student
     </select>
@@ -15,4 +23,16 @@
     <select id="getStudent" resultMap="Student">
         select * from student where studentId=#{studentId} and password=#{password}
     </select>
+
+    <select id="getScores" resultMap="Score">
+        select * from score where studentId=#{studentId}
+    </select>
+
+    <select id="findScores" resultMap="Score">
+        select * from score where studentId=#{studentId}  and (teacherId=#{teacherId} or #{teacherId}='') and (subject=#{subject} or #{subject}='')
+    </select>
+
+    <update id="updateStudentInfo">
+        update teacher set name = #{name}, phone = #{phone},email=#{email} where studentId = #{studentId}
+    </update>
 </mapper>

@@ -76,7 +76,7 @@ public class AdminServiceImpl implements AdminService {
         menu.setMenuId(Long.parseLong("3"));
         menu.setName("查看成绩");
         menu.setSpread("false");
-        menu.setHref("/teacher/findScoreInfo");
+        menu.setHref("/student/getScoreInfo");
         menu.setParentId(Long.parseLong("0"));
         menu.setSorting(Long.parseLong("9997"));
         menus.add(menu);
@@ -85,7 +85,7 @@ public class AdminServiceImpl implements AdminService {
         menu.setMenuId(Long.parseLong("4"));
         menu.setName("个人信息");
         menu.setSpread("false");
-        menu.setHref("/teacher/teacherInfo");
+        menu.setHref("/student/studentInfo");
         menu.setParentId(Long.parseLong("0"));
         menu.setSorting(Long.parseLong("9996"));
         menus.add(menu);

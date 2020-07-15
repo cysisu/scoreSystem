@@ -103,4 +103,9 @@ public class AdminController {
     public String getMain() {
         return "/jsp/main";
     }
+
+    @RequestMapping("/studentMain")
+    public String getStudent() {
+        return "/jsp/studentMain";
+    }
 }
