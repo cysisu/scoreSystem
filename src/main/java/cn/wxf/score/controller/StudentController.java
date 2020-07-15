@@ -38,6 +38,7 @@ public class StudentController {
     @RequestMapping(value = "/findScores")
     @ResponseBody
     public Map<String, Object> findScores(@RequestParam("teacherId") String teacherId, @RequestParam("subject") String subject , int page, int limit, HttpSession session) {
+        System.out.println("学生查看过");
         String studentId=session.getAttribute("id").toString();
         Score score=new Score(studentId,teacherId,subject);
         List<Score> scores=studentService.findScores(score);

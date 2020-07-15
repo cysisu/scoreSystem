@@ -55,7 +55,7 @@ layui.use(['jquery', 'table', 'layer', 'form'], function(){
 
   table.render({
     elem: '#test'
-    ,url:'/teacher/getScores'
+    ,url:'/student/getScores'
     ,title: '用户数据表'
     ,cols: [[
       {field:'subject', title:'subject', width:350, fixed: 'center', align:'center',sort: true}
@@ -68,15 +68,15 @@ layui.use(['jquery', 'table', 'layer', 'form'], function(){
    });
 
    $('#find-score-btn').click(function() {
-       var studentId=$('#studentId').val();
+       var teacherId=$('#teacherId').val();
        var subject=$('#subject').val();
-       console.log("studentId:"+studentId);
+       console.log("teacherId:"+teacherId);
 
        table.reload('user-tbl', {
        page: {
               curr: 1 //重新从第 1 页开始
        }
-       ,where:{studentId:studentId,subject:subject}
+       ,where:{teacherId:teacherId,subject:subject}
        , url: '/student/findScores'   //后台做模糊搜索接口路径
        , method: 'post'
       });

@@ -13,5 +13,4 @@ public interface StudentDao {
     List<Score> getScores(@Param("studentId")String studentId);
     List<Score> findScores(Score score);
     int updateStudentInfo(Student student);
-
 }
